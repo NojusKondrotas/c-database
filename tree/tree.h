@@ -25,3 +25,13 @@ struct s_node{
     struct s_leaf *east;
     int8 path[256];
 };
+typedef struct s_node Node;
+
+struct s_leaf{
+    union u_tree *west;
+    struct s_leaf *east;
+    int8 key[128];
+    int8 *value;
+    int16 size;
+};
+typedef struct s_leaf Leaf;
