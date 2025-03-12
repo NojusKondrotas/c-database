@@ -35,3 +35,9 @@ struct s_leaf{
     int16 size;
 };
 typedef struct s_leaf Leaf;
+
+union u_tree{
+    Node n;
+    Leaf l;
+};
+typedef union u_tree Tree;
